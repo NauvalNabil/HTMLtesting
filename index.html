@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - NAUVAL NABIL IMAN</title>
+    <title>Portofolio - Nauval Nabil Iman</title>
     <style>
         :root {
-            --bg-color: #f9f9f9;
-            --text-color: #333;
-            --primary-color: #222;
-            --secondary-color: #666;
-            --border-color: #eaeaea;
+            --bg-color: #f4f1ea;
+            --surface-color: #ffffff;
+            --text-color: #232323;
+            --primary-color: #1f2937;
+            --secondary-color: #5b6472;
+            --accent-color: #b45309;
+            --border-color: #e5ddd0;
+            --shadow-color: rgba(31, 41, 55, 0.08);
         }
 
         * {
@@ -24,48 +27,84 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            padding-top: 88px;
         }
 
-        /* Navigation Bar */
         nav {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
             width: 100%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 6px 24px var(--shadow-color);
             z-index: 1000;
             display: flex;
             justify-content: center;
-            padding: 1rem 0;
+            padding: 1rem 1.25rem;
         }
 
-        nav a {
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
             text-decoration: none;
-            color: var(--text-color);
-            margin: 0 1.5rem;
+            color: var(--primary-color);
             font-weight: 500;
-            transition: color 0.3s;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            transition: background-color 0.25s, color 0.25s, transform 0.25s;
         }
 
-        nav a:hover {
-            color: #007bff;
+        .nav-links a:hover {
+            background-color: #f2e6d8;
+            color: var(--accent-color);
+            transform: translateY(-1px);
         }
 
-        /* Container */
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 80px 20px 40px;
+            padding: 0 20px 48px;
         }
 
         section {
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1.75rem;
         }
 
-        section:last-child {
-            border-bottom: none;
+        .card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            padding: 1.75rem;
+        }
+
+        .section-grid {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .hero {
+            display: grid;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background-color: #f2e6d8;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
         }
 
         h1, h2, h3 {
@@ -76,64 +115,60 @@
         .section-title {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: none;
+            letter-spacing: 0;
             color: var(--primary-color);
         }
 
-        /* Hero / Profil */
-        .hero {
-            text-align: center;
-            padding: 4rem 0 2rem;
-        }
-
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
+            line-height: 1.1;
+            margin-bottom: 0;
         }
 
         .hero h2 {
             font-size: 1.2rem;
-            color: var(--secondary-color);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0;
         }
 
         .hero p {
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 760px;
             color: var(--secondary-color);
+            font-size: 1.03rem;
         }
 
-        /* Keahlian & Tools */
         .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.85rem;
         }
 
         .skill-tag {
-            background-color: #fff;
+            background-color: #fffaf4;
             border: 1px solid var(--border-color);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 0.9rem 1rem;
+            border-radius: 14px;
+            font-size: 0.95rem;
+            color: var(--primary-color);
         }
 
-        /* Proyek */
         .project {
-            background: #fff;
+            background: linear-gradient(180deg, #ffffff 0%, #fffdf9 100%);
             padding: 1.5rem;
-            border-radius: 8px;
+            border-radius: 18px;
             border: 1px solid var(--border-color);
             margin-bottom: 1.5rem;
+            box-shadow: 0 8px 24px var(--shadow-color);
         }
 
         .project-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 1rem;
+            gap: 1rem;
+            margin-bottom: 0.9rem;
         }
 
         .project-date {
@@ -149,112 +184,180 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Kontak */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-item {
+            padding: 1rem 1.1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            background: #fffaf4;
+        }
+
         .contact-info p {
             margin-bottom: 0.5rem;
         }
         
         .contact-info a {
-            color: #007bff;
+            color: var(--accent-color);
             text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 104px;
+            }
+
+            nav {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-links {
+                gap: 0.5rem;
+            }
+
+            .nav-links a {
+                padding: 0.45rem 0.75rem;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#profil">Profil</a>
-        <a href="#pendidikan">Pendidikan</a>
-        <a href="#keahlian">Keahlian</a>
-        <a href="#proyek">Proyek</a>
-        <a href="#kontak">Kontak</a>
+        <div class="nav-links">
+            <a href="#profil">Profil</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#keahlian">Keahlian</a>
+            <a href="#proyek">Proyek</a>
+            <a href="#kontak">Kontak</a>
+        </div>
     </nav>
 
     <div class="container">
         
-        <section id="profil" class="hero">
-            <h1>NAUVAL NABIL IMAN [cite: 1]</h1>
-            <h2>MAHASISWA SISTEM INFORMASI [cite: 1]</h2>
-            <p>Mahasiswa S1 Sistem Informasi yang berfokus pada pengembangan karier di bidang Data Science dan Pengembangan Perangkat Lunak. [cite: 8] Memiliki keunggulan spesifik dalam melakukan data cleaning untuk memastikan kualitas dataset, antusiasme dan penguasaan yang kuat terhadap teknologi Artificial Intelligence (AI), serta keahlian praktis dalam melatih dan mengoptimalkan model machine learning. [cite: 9] Didukung oleh kemampuan logika dan problem-solving yang terasah melalui penyelesaian kendala teknis secara mandiri, siap untuk memberikan kontribusi nyata dan berkembang dalam lingkungan magang profesional. [cite: 10]</p>
+        <section id="profil" class="card hero">
+            <span class="hero-badge">Profil Singkat</span>
+            <h1>Nauval Nabil Iman</h1>
+            <h2>Mahasiswa Sistem Informasi</h2>
+            <p>Saya mahasiswa S1 Sistem Informasi yang tertarik pada Data Science dan pengembangan perangkat lunak. Fokus utama saya adalah data cleaning, preprocessing, dasar machine learning, dan pengembangan aplikasi yang rapi serta bermanfaat. Saya juga terbiasa menyelesaikan masalah teknis secara mandiri dan terus belajar untuk meningkatkan kualitas hasil kerja.</p>
         </section>
 
-        <section id="pendidikan">
+        <section id="pendidikan" class="card">
             <h2 class="section-title">Pendidikan</h2>
-            <div>
-                <h3>Universitas Duta Bangsa Surakarta [cite: 12]</h3>
-                <p>S1 Sistem Informasi [cite: 12] | 2023-Sekarang [cite: 15]</p>
+            <div class="section-grid">
+                <div>
+                    <h3>Universitas Duta Bangsa Surakarta</h3>
+                    <p class="subtitle">S1 Sistem Informasi | 2023 - Sekarang</p>
+                </div>
+                <div>
+                    <p>Fokus pembelajaran mencakup pengolahan data, dasar pemrograman, pengembangan aplikasi, dan penerapan machine learning untuk kebutuhan analisis maupun proyek praktis.</p>
+                </div>
             </div>
         </section>
 
-        <section id="keahlian">
+        <section id="keahlian" class="card">
             <h2 class="section-title">Kompetensi & Tools</h2>
             <div class="skills-grid">
-                <span class="skill-tag">Artificial Intelligence (AI) [cite: 14]</span>
-                <span class="skill-tag">Data Cleaning [cite: 14]</span>
-                <span class="skill-tag">Data Preprocessing [cite: 17]</span>
-                <span class="skill-tag">Python [cite: 18]</span>
-                <span class="skill-tag">Flutter & Dart [cite: 18]</span>
-                <span class="skill-tag">Supabase [cite: 19]</span>
-                <span class="skill-tag">Streamlit [cite: 20]</span>
-                <span class="skill-tag">Model Training CNN [cite: 21]</span>
-                <span class="skill-tag">Git/GitHub [cite: 22]</span>
-                <span class="skill-tag">Postman [cite: 23]</span>
-                <span class="skill-tag">Naive Bayes [cite: 26]</span>
-                <span class="skill-tag">Linear Regression [cite: 26]</span>
-                <span class="skill-tag">Logical Problem Solving [cite: 24]</span>
-                <span class="skill-tag">Troubleshooting Kode [cite: 25]</span>
+                <span class="skill-tag">Artificial Intelligence</span>
+                <span class="skill-tag">Data Cleaning</span>
+                <span class="skill-tag">Data Preprocessing</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Flutter & Dart</span>
+                <span class="skill-tag">Supabase</span>
+                <span class="skill-tag">Streamlit</span>
+                <span class="skill-tag">CNN</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Postman</span>
+                <span class="skill-tag">Naive Bayes</span>
+                <span class="skill-tag">Linear Regression</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Debugging</span>
             </div>
         </section>
 
-        <section id="proyek">
+        <section id="proyek" class="card">
             <h2 class="section-title">Pengalaman Proyek & Pengembangan</h2>
             
             <div class="project">
                 <div class="project-header">
-                    <h3>Analisis Sentimen Ulasan Aplikasi (Studi Kasus: War Thunder) [cite: 28]</h3>
-                    <span class="project-date">Apr 2026 [cite: 29]</span>
+                    <h3>Analisis Sentimen Ulasan Aplikasi (Studi Kasus: War Thunder)</h3>
+                    <span class="project-date">Apr 2026</span>
                 </div>
                 <ul>
-                    <li>Menulis dan memodifikasi skrip Python untuk melakukan scraping data ulasan aplikasi dari Google Play Store secara efisien. [cite: 30]</li>
-                    <li>Menerapkan teknik data cleaning yang teliti untuk menyeleksi, membersihkan noise, dan memformat data mentah sebelum tahap pelabelan. [cite: 31]</li>
-                    <li>Menggunakan kemampuan analitis untuk memproses dataset sehingga siap digunakan dalam penarikan kesimpulan sentimen pengguna. [cite: 32]</li>
+                    <li>Menulis dan memodifikasi skrip Python untuk scraping data ulasan aplikasi dari Google Play Store.</li>
+                    <li>Menerapkan data cleaning untuk menghapus noise dan menyiapkan data sebelum pelabelan.</li>
+                    <li>Mengolah dataset agar siap dipakai untuk analisis sentimen pengguna.</li>
                 </ul>
             </div>
 
             <div class="project">
                 <div class="project-header">
-                    <h3>Klasifikasi Kematangan Tomat Berbasis Web [cite: 33]</h3>
-                    <span class="project-date">Apr 2026 [cite: 34]</span>
+                    <h3>Klasifikasi Kematangan Tomat Berbasis Web</h3>
+                    <span class="project-date">Apr 2026</span>
                 </div>
                 <ul>
-                    <li>Membangun dan melatih model machine learning menggunakan arsitektur Convolutional Neural Networks (CNN) untuk mendeteksi tingkat kematangan buah tomat. [cite: 35]</li>
-                    <li>Melakukan eksperimen skenario pembagian data (data splitting) guna mengoptimalkan proses pelatihan dan akurasi model. [cite: 36]</li>
-                    <li>Menerapkan logika problem-solving untuk memecahkan error komputasi saat implementasi di VS Code. [cite: 37]</li>
-                    <li>Mengintegrasikan model yang telah dilatih ke dalam antarmuka web interaktif menggunakan Streamlit. [cite: 38]</li>
+                    <li>Membangun dan melatih model CNN untuk mendeteksi tingkat kematangan buah tomat.</li>
+                    <li>Melakukan eksperimen pembagian data untuk mengoptimalkan akurasi model.</li>
+                    <li>Mengatasi error implementasi dengan pendekatan problem solving di VS Code.</li>
+                    <li>Mengintegrasikan model ke antarmuka web interaktif menggunakan Streamlit.</li>
                 </ul>
             </div>
 
             <div class="project">
                 <div class="project-header">
-                    <h3>Aplikasi Mobile MyInventory (Flutter & Supabase) [cite: 39]</h3>
-                    <span class="project-date">Jun 2025 [cite: 39]</span>
+                    <h3>Aplikasi Mobile MyInventory (Flutter & Supabase)</h3>
+                    <span class="project-date">Jun 2025</span>
                 </div>
                 <ul>
-                    <li>Merancang dan mengembangkan aplikasi mobile untuk sistem pelacakan aset yang memungkinkan pengguna melakukan pendataan barang secara real-time. [cite: 40]</li>
-                    <li>Mengimplementasikan fitur CRUD (Create, Read, Update, Delete) untuk mengelola data inventaris, memastikan setiap barang tercatat dengan akurat beserta detail informasinya. [cite: 41]</li>
-                    <li>Membangun antarmuka pengguna (UI) yang dinamis dengan visualisasi daftar kartu (card list) untuk memudahkan pemantauan stok dan riwayat aset. [cite: 42]</li>
-                    <li>Mengintegrasikan sistem manajemen database cloud untuk memastikan keamanan data pencatatan dan mencegah redudansi informasi barang. [cite: 43]</li>
+                    <li>Merancang aplikasi mobile untuk pelacakan aset dan pendataan barang secara real-time.</li>
+                    <li>Mengimplementasikan fitur CRUD untuk mengelola data inventaris.</li>
+                    <li>Membangun UI yang dinamis dengan card list untuk memudahkan pemantauan stok.</li>
+                    <li>Mengintegrasikan database cloud agar data lebih aman dan terstruktur.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="kontak">
+        <section id="kontak" class="card">
             <h2 class="section-title">Informasi Kontak</h2>
-            <div class="contact-info">
-                <p><strong>Lokasi:</strong> Surakarta, Jawa Tengah [cite: 4]</p>
-                <p><strong>Telepon:</strong> +62 896 6569 6749 [cite: 3]</p>
-                <p><strong>Email:</strong> <a href="mailto:nauvalnabill00@gmail.com">nauvalnabill00@gmail.com [cite: 6]</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/Nauval Nabil" target="_blank">github.com/Nauval Nabil [cite: 7]</a></p>
+            <div class="contact-grid contact-info">
+                <div class="contact-item">
+                    <p><strong>Lokasi</strong></p>
+                    <p>Surakarta, Jawa Tengah</p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Telepon</strong></p>
+                    <p>+62 896 6569 6749</p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>Email</strong></p>
+                    <p><a href="mailto:nauvalnabill00@gmail.com">nauvalnabill00@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <p><strong>GitHub</strong></p>
+                    <p><a href="https://github.com/NauvalNabil" target="_blank" rel="noreferrer">github.com/NauvalNabil</a></p>
+                </div>
             </div>
         </section>
 
