@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - NAUVAL NABIL IMAN</title>
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --primary-color: #222;
+            --secondary-color: #666;
+            --border-color: #eaeaea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+        }
+
+        /* Hero / Profil */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--secondary-color);
+        }
+
+        /* Keahlian & Tools */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Proyek */
+        .project {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .project-date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .project ul {
+            padding-left: 20px;
+        }
+
+        .project ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Kontak */
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="profil" class="hero">
+            <h1>NAUVAL NABIL IMAN [cite: 1]</h1>
+            <h2>MAHASISWA SISTEM INFORMASI [cite: 1]</h2>
+            <p>Mahasiswa S1 Sistem Informasi yang berfokus pada pengembangan karier di bidang Data Science dan Pengembangan Perangkat Lunak. [cite: 8] Memiliki keunggulan spesifik dalam melakukan data cleaning untuk memastikan kualitas dataset, antusiasme dan penguasaan yang kuat terhadap teknologi Artificial Intelligence (AI), serta keahlian praktis dalam melatih dan mengoptimalkan model machine learning. [cite: 9] Didukung oleh kemampuan logika dan problem-solving yang terasah melalui penyelesaian kendala teknis secara mandiri, siap untuk memberikan kontribusi nyata dan berkembang dalam lingkungan magang profesional. [cite: 10]</p>
+        </section>
+
+        <section id="pendidikan">
+            <h2 class="section-title">Pendidikan</h2>
+            <div>
+                <h3>Universitas Duta Bangsa Surakarta [cite: 12]</h3>
+                <p>S1 Sistem Informasi [cite: 12] | 2023-Sekarang [cite: 15]</p>
+            </div>
+        </section>
+
+        <section id="keahlian">
+            <h2 class="section-title">Kompetensi & Tools</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Artificial Intelligence (AI) [cite: 14]</span>
+                <span class="skill-tag">Data Cleaning [cite: 14]</span>
+                <span class="skill-tag">Data Preprocessing [cite: 17]</span>
+                <span class="skill-tag">Python [cite: 18]</span>
+                <span class="skill-tag">Flutter & Dart [cite: 18]</span>
+                <span class="skill-tag">Supabase [cite: 19]</span>
+                <span class="skill-tag">Streamlit [cite: 20]</span>
+                <span class="skill-tag">Model Training CNN [cite: 21]</span>
+                <span class="skill-tag">Git/GitHub [cite: 22]</span>
+                <span class="skill-tag">Postman [cite: 23]</span>
+                <span class="skill-tag">Naive Bayes [cite: 26]</span>
+                <span class="skill-tag">Linear Regression [cite: 26]</span>
+                <span class="skill-tag">Logical Problem Solving [cite: 24]</span>
+                <span class="skill-tag">Troubleshooting Kode [cite: 25]</span>
+            </div>
+        </section>
+
+        <section id="proyek">
+            <h2 class="section-title">Pengalaman Proyek & Pengembangan</h2>
+            
+            <div class="project">
+                <div class="project-header">
+                    <h3>Analisis Sentimen Ulasan Aplikasi (Studi Kasus: War Thunder) [cite: 28]</h3>
+                    <span class="project-date">Apr 2026 [cite: 29]</span>
+                </div>
+                <ul>
+                    <li>Menulis dan memodifikasi skrip Python untuk melakukan scraping data ulasan aplikasi dari Google Play Store secara efisien. [cite: 30]</li>
+                    <li>Menerapkan teknik data cleaning yang teliti untuk menyeleksi, membersihkan noise, dan memformat data mentah sebelum tahap pelabelan. [cite: 31]</li>
+                    <li>Menggunakan kemampuan analitis untuk memproses dataset sehingga siap digunakan dalam penarikan kesimpulan sentimen pengguna. [cite: 32]</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Klasifikasi Kematangan Tomat Berbasis Web [cite: 33]</h3>
+                    <span class="project-date">Apr 2026 [cite: 34]</span>
+                </div>
+                <ul>
+                    <li>Membangun dan melatih model machine learning menggunakan arsitektur Convolutional Neural Networks (CNN) untuk mendeteksi tingkat kematangan buah tomat. [cite: 35]</li>
+                    <li>Melakukan eksperimen skenario pembagian data (data splitting) guna mengoptimalkan proses pelatihan dan akurasi model. [cite: 36]</li>
+                    <li>Menerapkan logika problem-solving untuk memecahkan error komputasi saat implementasi di VS Code. [cite: 37]</li>
+                    <li>Mengintegrasikan model yang telah dilatih ke dalam antarmuka web interaktif menggunakan Streamlit. [cite: 38]</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Aplikasi Mobile MyInventory (Flutter & Supabase) [cite: 39]</h3>
+                    <span class="project-date">Jun 2025 [cite: 39]</span>
+                </div>
+                <ul>
+                    <li>Merancang dan mengembangkan aplikasi mobile untuk sistem pelacakan aset yang memungkinkan pengguna melakukan pendataan barang secara real-time. [cite: 40]</li>
+                    <li>Mengimplementasikan fitur CRUD (Create, Read, Update, Delete) untuk mengelola data inventaris, memastikan setiap barang tercatat dengan akurat beserta detail informasinya. [cite: 41]</li>
+                    <li>Membangun antarmuka pengguna (UI) yang dinamis dengan visualisasi daftar kartu (card list) untuk memudahkan pemantauan stok dan riwayat aset. [cite: 42]</li>
+                    <li>Mengintegrasikan sistem manajemen database cloud untuk memastikan keamanan data pencatatan dan mencegah redudansi informasi barang. [cite: 43]</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <h2 class="section-title">Informasi Kontak</h2>
+            <div class="contact-info">
+                <p><strong>Lokasi:</strong> Surakarta, Jawa Tengah [cite: 4]</p>
+                <p><strong>Telepon:</strong> +62 896 6569 6749 [cite: 3]</p>
+                <p><strong>Email:</strong> <a href="mailto:nauvalnabill00@gmail.com">nauvalnabill00@gmail.com [cite: 6]</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/Nauval Nabil" target="_blank">github.com/Nauval Nabil [cite: 7]</a></p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
